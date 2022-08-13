@@ -1,0 +1,281 @@
+>>> from models import *
+>>> data=CardTitle("Yelo Light","https://www.yelo.az/site/assets/files/5731/55_2.png")
+>>> from extensions import *
+>>> db.session.add(data)
+>>> db.session.commit()
+
+
+>>> from models import *
+>>> data=CardTitle("Yelo Premium","https://www.yelo.az/site/assets/files/2203/visa-platinum.svg")
+>>> from extensions import *
+>>> db.session.add(data)
+>>> db.session.commit()
+
+
+>>> from models import *
+>>> data=CardTitle("Yelo Kredit kart","https://www.yelo.az/site/assets/files/1042/55.png")
+>>> from extensions import *
+>>> db.session.add(data)
+>>> db.session.commit()
+
+
+table2
+
+>>> from models import *
+>>> list=CardList("Yelo Light","Yelo kart rahatlıq anlayışını dəyişəcək - rahat xərcləyəcəksən, rahat izləyəcəksən, qazanacaqsan, endirimlər alacaqsan.","https://www.yelo.az/site/assets/files/5731/55_2.png","1 il / 3 il","AZN / USD / EUR","30%-dək")
+>>> from extensions import *
+>>> db.session.add(list)
+>>> db.session.commit()
+
+
+>>> from models import *
+>>> list=CardList("Yelo Premium","Yüksək statusun göstəricisi olan bu kart sahibinə yalnız Azərbaycanda deyil, hər yerdə və hər zaman eksklüziv imkanlar yaradır.","https://www.yelo.az/site/assets/files/2203/visa-platinum.svg","3 il","AZN / USD / EUR","30%-dək")
+>>> from extensions import *
+>>> db.session.add(list)
+>>> db.session.commit()
+
+
+>>> from models import *
+>>> list=CardList("Yelo Kredit kartı","Yelo Kredit kartı - rahat xərcləmək üçün","https://www.yelo.az/site/assets/files/5731/55_2.png","300 - 10 000 AZN","45 günədək","30%-dək")
+>>> from extensions import *
+>>> db.session.add(list)
+>>> db.session.commit()
+
+
+table3 
+
+>>> from models import *
+>>> data=EmanetlerList("Yelo Sabit","Pulunuz sizin üçün işləsin","https://www.yelo.az/site/assets/files/3378/shutterstock_478944469-3_1.png","min. 100 AZN/USD","12 / 24 / 36 ay","aylıq və ya müddətin sonunda")
+>>> from extensions import *
+>>> db.session.add(data)
+>>> db.session.commit()
+
+
+>>> from models import *
+>>> data=EmanetlerList('"Parlaq Zəfər" əmanəti',"Pulunuz sizin üçün işləsin","https://www.yelo.az/site/assets/files/6636/zefer_emaneti-isolated.png","min. 100 AZN","12 ay","aylıq və ya müddətin sonunda")
+>>> from extensions import *
+>>> db.session.add(data)
+>>> db.session.commit()
+
+
+>>> from models import *
+>>> data=EmanetlerList("Yelo Yığım","Pulunuz sizin üçün işləsin","https://www.yelo.az/site/assets/files/3406/depositnew-pic.png","100 AZN/USD","12 ay","aylıq və ya müddətin sonunda")
+>>> from extensions import *
+>>> db.session.add(data)
+>>> db.session.commit()
+
+
+CardInformation
+
+>>> from models import *
+>>> list1=Information("Valyuta: AZN / USD / EUR","https://www.yelo.az/site/assets/files/2211/currency.svg",2)
+>>> from extensions import *
+>>> db.session.add(list1)
+>>> db.session.commit()
+
+>>> from models import *
+>>> list1=Information("Müddət: 3 il","https://www.yelo.az/site/assets/files/3114/calendar.svg",2)
+>>> from extensions import *
+>>> db.session.add(list1)
+>>> db.session.commit()
+
+
+>>> from models import *
+>>> list1=Information("Balansdakı qalığa gəlir illik 7% (AZN) / 0.2% (USD)","https://www.yelo.az/site/assets/files/2943/percent.svg",2)
+>>> from extensions import *
+>>> db.session.add(list1)
+>>> db.session.commit()
+
+
+
+>>> from models import *
+>>> list1=Information("Partnyorlarda 30%-dək cashback","https://www.yelo.az/site/assets/files/2217/cashback.svg",2)
+>>> from extensions import *
+>>> db.session.add(list1)
+>>> db.session.commit()
+
+
+>>> from models import *
+>>> list1=Information("Ölkədaxili hər yerdə 1% cashback","https://www.yelo.az/site/assets/files/3115/126.svg",2)
+>>> from extensions import *
+>>> db.session.add(list1)
+>>> db.session.commit()
+
+>>> from models import *
+>>> list1=Information("Təmassız ödəniş","https://www.yelo.az/site/assets/files/2214/4.png",2)
+>>> from extensions import *
+>>> db.session.add(list1)
+>>> db.session.commit()
+
+>>> from models import *
+>>> list1=Information("Pulsuz mobil əlavə","https://www.yelo.az/site/assets/files/2212/2.png",2)
+>>> from extensions import *
+>>> db.session.add(list1)
+>>> db.session.commit()
+
+>>> from models import *
+>>> list1=Information("Pulsuz SMS bildiriş","https://www.yelo.az/site/assets/files/3116/124.svg",2)
+>>> from extensions import *
+>>> db.session.add(list1)
+>>> db.session.commit()
+
+
+>>> from models import *
+>>> list1=Information("Yelo Bank ATM-lərindən pulun komissiyasız çıxarılması","https://www.yelo.az/site/assets/files/2216/atm_cash.svg",2)
+>>> from extensions import *
+>>> db.session.add(list1)
+>>> db.session.commit()
+
+
+>>> from models import *
+>>> list1=Information("Qiymət: 70 AZN (pulsuz almaq imkanı)","https://www.yelo.az/site/assets/files/2942/125.svg",2)
+>>> from extensions import *
+>>> db.session.add(list1)
+>>> db.session.commit()
+
+>>> from models import *
+>>> list1=Information("Konsyerj çat-bot","https://www.yelo.az/site/assets/files/3995/concierge_2.svg",2)
+>>> from extensions import *
+>>> db.session.add(list1)
+>>> db.session.commit()
+
+
+id=1
+
+>>> from models import *
+>>> list1=Information("Valyuta: AZN / USD / EUR","https://www.yelo.az/site/assets/files/2211/currency.svg",1)
+>>> from extensions import *
+>>> db.session.add(list1)
+>>> db.session.commit()
+
+
+>>> from models import *
+>>> list1=Information("Müddət: 1 il / 3 il","https://www.yelo.az/site/assets/files/3112/calendar-2.svg","#947EEC",1)
+>>> from extensions import *
+>>> db.session.add(list1)
+>>> db.session.commit()
+
+
+>>> from models import *
+>>> list1=Information("Balansdakı qalığa gəlir illik 5% (AZN) / 0.1% (USD)","https://www.yelo.az/site/assets/files/2940/percent.svg","#FF3A33",1)
+>>> from extensions import *
+>>> db.session.add(list1)
+>>> db.session.commit()
+
+>>> from models import *
+>>> list1=Information("Partnyorlarda 30%-dək cashback","https://www.yelo.az/site/assets/files/1119/cashback.svg","#0FDB9D",1)
+>>> from extensions import *
+>>> db.session.add(list1)
+>>> db.session.commit()
+
+>>> from models import *
+>>> list1=Information("Ölkədaxili hər yerdə 0.5% cashback","https://www.yelo.az/site/assets/files/3113/126.svg","#75842F",1)
+>>> from extensions import *
+>>> db.session.add(list1)
+>>> db.session.commit()
+
+>>> from models import *
+>>> list1=Information("Təmassız ödəniş","https://www.yelo.az/site/assets/files/1115/4.png","#53CC60",1)
+>>> from extensions import *
+>>> db.session.add(list1)
+>>> db.session.commit()
+
+
+>>> from models import *
+>>> list1=Information("Pulsuz mobil əlavə","https://www.yelo.az/site/assets/files/1113/2.png","#a420e6",1)
+>>> from extensions import *
+>>> db.session.add(list1)
+>>> db.session.commit()
+
+
+>>> from models import *
+>>> list1=Information("Yelo Bank ATM-lərindən pulun komissiyasız çıxarılması","https://www.yelo.az/site/assets/files/1118/atm_cash.svg","#2174C3",1)
+>>> from extensions import *
+>>> db.session.add(list1)
+>>> db.session.commit()
+>>> 
+>>> from models import *
+>>> list1=Information("Qiymət: 1 illik - 10 AZN / 3 illik - 15 AZN (pulsuz almaq imkanı)","https://www.yelo.az/site/assets/files/2941/125.svg","#F799B9",1)
+>>> from extensions import *
+>>> db.session.add(list1)
+>>> db.session.commit()
+
+
+>>> from models import *
+>>> list2=Information("Məbləğ: 300 - 10 000 AZN","https://www.yelo.az/site/assets/files/5739/wallet.svg","#0091FE",3)
+>>> from extensions import *
+>>> db.session.add(list2)
+>>> db.session.commit()
+
+>>> from models import *
+>>> list2=Information("Müddət: 36 ay","https://www.yelo.az/site/assets/files/5740/calendar-2.svg","#947EEC",3)
+>>> from extensions import *
+>>> db.session.add(list2)
+>>> db.session.commit()
+
+>>> 
+>>> from models import *
+>>> list2=Information("İllik faiz dərəcəsi: Light 25% / Premium 23%","https://www.yelo.az/site/assets/files/5741/percent-1.svg","#FF3A33",3)
+>>> from extensions import *
+>>> db.session.add(list2)
+>>> db.session.commit()
+
+>>> from models import *
+>>> list2=Information("45 günədək güzəşt müddəti","https://www.yelo.az/site/assets/files/5747/icon15.svg","#2174C3",3)
+>>> from extensions import *
+>>> db.session.add(list2)
+>>> db.session.commit()
+
+>>> from models import *
+>>> list2=Information("Partnyorlarda 30%-dək cashback","https://www.yelo.az/site/assets/files/5742/cashback.svg","#0FDB9D",3)
+>>> from extensions import *
+>>> db.session.add(list2)
+>>> db.session.commit()
+>>> 
+>>> from models import *
+>>> list2=Information("Ödəniş növü: Sərbəst","https://www.yelo.az/site/assets/files/5744/4.png","#53CC60",3)
+>>> from extensions import *
+>>> db.session.add(list2)
+>>> db.session.commit()
+
+>>> from models import *
+>>> list2=Information("Pulsuz mobil əlavə","https://www.yelo.az/site/assets/files/5745/2.png","#a420e6",3)
+>>> from extensions import *
+>>> db.session.add(list2)
+>>> db.session.commit()
+
+
+>>> from models import *
+>>> list2=Information("Rəsmiləşdirmə komissiyası: 1%","https://www.yelo.az/site/assets/files/5748/percent_2.svg","#F799B9",3)
+>>> from extensions import *
+>>> db.session.add(list2)
+>>> db.session.commit()
+
+>>> from models import *
+>>> list2=Information("Valyuta: AZN","https://www.yelo.az/site/assets/files/5749/currency.svg","#0091FE",3)
+>>> from extensions import *
+>>> db.session.add(list2)
+>>> db.session.commit()
+
+>>> from models import *
+>>> list2=Information("Hər yerdə cashback (Light 0.5% / Premium 1%)","https://www.yelo.az/site/assets/files/5793/126.svg","#75842F",3)
+>>> from extensions import *
+>>> db.session.add(list2)
+>>> db.session.commit()
+
+>>> from models import *
+>>> list2=Information("Təmassız ödəniş","https://www.yelo.az/site/assets/files/5795/4.png","#53CC60",3)
+>>> from extensions import *
+>>> db.session.add(list2)
+>>> db.session.commit()
+
+
+>>> 
+>>> from models import *
+>>> list2=Information("Kartın qiyməti: Pulsuz *","https://www.yelo.az/site/assets/files/6338/125.svg","#FF3A33",3)
+>>> from extensions import *
+>>> db.session.add(list2)
+>>> db.session.commit()
+
+
+text=Cardabout("Çoxfunksiyalı Yelo kart ilə yalnız qalıq məbləğə faiz gəliri deyil, həm də hər ödənişindən cashback qazanacaq və digər üstünlüklərindən faydalanacaqsan","","Kartınla aylıq ən azı 300 AZN və ya ekvivalentində xərcləyərək (onlayn və POS terminallarda alış-veriş əməliyyatları) bir çox əlavə üstünlüklər də qazana bilərsən:","Daha yüksək cashback faizi (0.8%)","Kartındakı qalıq məbləğə daha yüksək faiz gəliri","Cari kredit borcunun illik 1%-in karta geri qaytarılması","Şərti ilk 3 ay ardıcıl yerinə yetirdikdə kartın qiymətinin balansa qaytarılması","Kartın yalnız şaquli formasına görə deyil, həm də kənarının rənginə görə pul qabında digər kartlardan fərqlənəcək. Tezliklə bu kartı daha çox sevəcəksən. Debet kart ilə dünyanın istənilən ölkəsində rahat alış-veriş, onlayn ödənişlər edə, restoran, bilet və digər xidmətlərdən istifadə edə və ya vəsaiti rahat nağdlaşdıra bilərsiniz. Həmçinin debet kart şifrəsini online pin set xidmətindən yararlanaraq təyin edə bilərsiniz. Yuxarıdakı şərtləri ödəyərək pulsuz debet kart əldə edə bilərsiniz. Bu və daha çox üstünlüklərdən yararlanmaq üçün aşağıdakı sifariş formasından istifadə edərək debet kart sifarişi edə bilərsiniz.",1)

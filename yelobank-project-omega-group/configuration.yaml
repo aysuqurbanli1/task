@@ -1,0 +1,4 @@
+# recorder:
+#   purge_keep_days: 1
+#   purge_interval: 1
+#   db_url: mysql://hass:xxxxxxxpassxxxx@192.168.X.X/homeassistant?charset=utf8

@@ -1,0 +1,1255 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    }
+    
+    header{
+    font-family:sans-serif;
+    }
+    
+    #navbar1{
+    height: 45px;
+    padding-top: 10px;
+    border-bottom: 1px solid #ECECEC;
+    }
+    
+    .navbar-nav .nav-link{
+    font-size:13px;
+    }
+    .navbar-nav .nav-link3{
+    font-size:13px;
+    }
+    
+    .nav-item{
+    /* padding: 0px 7px; */
+    margin: 0 7px;
+    }
+    .nav-item:hover{
+    border-bottom: 2px solid orange;
+    }
+    
+    .nav-item2{
+    padding: 0px 7px;
+    }
+    
+    #logo {
+    display: block;
+    width: 144px;
+    height: 36px;
+    background: url(https://www.yelo.az/site/templates/style/img/logo.svg) no-repeat center;
+    }
+    .navbar-brand{
+    padding: -1px 10px;
+    font-size: 15px;
+    padding-right: 7px;
+    padding-top: 8px;
+    font-weight:600;
+    font-family: 'm';
+    }
+    .navbar-brand:hover{
+    border-bottom: 2px solid black;
+    }
+    #buttonbank{
+    height: 55px;
+    width: 170px;
+    margin-right: 13px;
+    border: 1px solid rgba(0,0,0,0.1);
+    }
+    
+    #buttonbank:hover{
+    background-color: black;
+    color: white;
+    
+    }
+
+
+.modal{
+    display: none;
+    height: 122px;
+    
+  
+  }
+
+.modal.show-modal{
+  background-color: white;
+  display: block;
+
+
+}
+.modal input{
+  height: 70px;
+  width: 54%;
+  border: none;
+  /* margin-top: 20px; */
+  margin-left: 400px;
+  margin-bottom: 40px;
+  margin-top: 19px;
+}
+.modal button{
+  margin-left: 18px;
+  /* background-image: url(https://www.yelo.az/site/templates/style/img/search_header.svg); */
+  background-repeat: no-repeat;
+  /* height: 200px;
+  width: 200px; */
+  background-color: white;
+  background-size: auto;
+
+
+
+}
+.modal  i{
+  width: 49px;
+height: 39px;
+color: rgba(64, 53, 53, 0.44);
+}
+
+.modal i:hover{
+  cursor: pointer;
+}
+    .ex{
+    position: fixed;
+    /* top: 0; */
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    transition: 0.3s;
+    padding: 2px 100px;
+    z-index: 200;
+    }
+    .ex.sticky #free{
+    display: none;
+    /* transition: 0.3s; */
+    }
+    .ex.sticky #buttonbank{
+    width: 60px;
+    transition: 0.2s;
+    }
+    .ex #free{
+    display: inline;
+    
+    }
+    .ex.sticky{
+    top: 0;
+    padding:5px 100px;
+    background: white;
+    border-bottom: 1px solid transparent;
+    }
+    
+    
+    
+    
+    
+    
+    #categorybutton{
+    width: 55px;
+    }
+    
+    #section1{
+    margin-left: 230px;
+    }
+    
+    .card-grey-background{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* position: absolute; */
+    /* background-color: #e2e2e2; */
+    background-size: contain;
+    background-repeat: no-repeat ;
+    background-position: right;
+    border: 1px solid #ECECEC;
+    border-radius: 12px;
+    width: 100%;
+    height: 100%;
+    height: 459px;
+    }
+    .yelo-kart-image{
+    width: 188px;
+    height: 297px;
+    background-size: cover;
+    border-radius: 15px;
+    /* transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); */
+    transform-origin: 0px 0px;
+    position: absolute;
+    top: -93px;
+    left: -140px;
+    z-index: 2;
+    box-shadow: 7px 3px 20px rgba(0,0,0,0.1);
+    transition: all 0.4s cubic-bezier(.52, .01, .16, 1);
+    transform: matrix3d(0.858606, 0.298387, 0, -0.000414946, -0.651602, 0.939378, 0, -4.94499e-05, 0, 0, 1, 0, 216, -3, 0, 1);
+    }
+    
+    .shadow1{
+    width: 188px;
+    height: 297px;
+    border-radius: 15px;
+    top: -112px;
+    left: -134px;
+    
+    background-size: cover;
+    /* transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); */
+    transform-origin: 0px 0px;
+    background-size: contain;
+    position: absolute;
+    
+    opacity: 0.5;
+    transform: matrix3d(1.15642, 0.32831, 0, -0.000722424, -0.739128, 1.15982, 0, 0.00106583, 0, 0, 1, 0, 238, 46, 0, 1);
+    transition: all 0.4s cubic-bezier(.52, .01, .16, 1);
+    }
+    
+    .grey-background-card-image img{
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    }
+    #card-grey-background-text{
+    /* padding: 45px 40px 45px 60px;
+    width: 590px; */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    }
+    
+    .card-grey-background-order-area{
+    height: 0px;
+    margin-top: 40px;
+    }
+    #grey-order-btn{
+    margin-top: 50px;
+    transform: skew(-14deg,0);
+    background-color: black;
+    font-weight: bold;
+    border: none;
+    }
+    
+    #grey-order-btn:hover{
+    background-color: white;
+    color: black;
+    border: none;
+    }
+    
+    
+    
+    
+    
+    .choosefield-3{
+    width: 100%;
+    margin: 0 0 0 0;
+    text-align: center;
+    border-bottom: 1px solid #ECECEC;
+    }
+    .choosefield-3 li{
+    display: inline-block;
+    }
+    
+    .choosefield-3 li a{
+    color: black;
+    font-size: 17px;
+    padding: 27px 20px;
+    display: block;
+    height: 80px;
+    box-sizing: border-box;
+    position: relative;
+    text-decoration: none;
+    font-family: sans-serif;
+    }
+    /* .choosefield-3 li:hover{
+    border-bottom: 1px solid orange;
+    } */
+    
+    
+    #first-section-information{
+    padding: 0 0;
+    margin-top: 70px;
+    margin-bottom: 50px;
+    }
+    
+    #first-section-min-text{
+    font-size: 21px;
+    color: black;
+    padding:0 10px ;
+    }
+    
+    
+    
+    
+    
+    
+    .document-icon{
+    
+    width: 70px;
+    height: 70px;
+    border-radius: 10px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-bottom: 47px;
+    margin-left: 15px;
+    }
+    .all-document{
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 0px;
+    /* align-items: center; */
+    }
+    .all-document li{
+    margin: 10px 20px;
+    padding-top: 0;
+    border: 1px solid rgba(202, 192, 192, 0.25);
+    height: 150px;
+    border-radius: 10px;
+    
+    }
+    
+    .document-one:hover{
+    border: 1px solid rgba(79, 76, 76, 0.25);
+    }
+    .document-one{
+    display: flex;
+    align-items: center;
+    /* display: flex; */
+    
+    align-items: center;
+    /* margin-bottom: 0; */
+    }
+    /* .word{ */
+    /* justify-content: center;
+    display: flex;
+    flex-direction: column; */
+    /* padding: 0 0 0 20px; */
+    /* } */
+    .document-word p{
+    margin-bottom:0 ;
+    /* padding-left: 10px; */
+    color: rgba(94, 81, 81, 0.63);
+    font-weight: bold;
+    
+    }
+    
+    .document-word{
+    width: calc(100% - 70px);
+    box-sizing: border-box;
+    padding: 0 0 0 20px;
+    /* width: 200px; */
+    
+    }
+    
+    .document-download-word{
+    display: flex;
+    }
+    .document-download-word span{
+    text-decoration: underline;
+    color: #0091FE;
+    }
+    
+    
+    
+    .small-icon{
+    
+    width: 70px;
+    height: 70px;
+    border-radius: 10px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    }
+    .all-small-icon{
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 0px;
+    /* align-items: center; */
+    }
+    .all-small-icon li{
+    margin: 10px 20px;
+    padding-top: 0;
+    
+    }
+    .all-small-icon li p{
+    color: rgba(0,0,0,0.5);
+    font-size: 14px;
+    font-family: sans-serif;
+  
+    }
+    .small-icon-one{
+    display: flex;
+    align-items: center;
+    /* display: flex; */
+    
+    align-items: center;
+    /* margin-bottom: 0; */
+    }
+    /* .word{ */
+    /* justify-content: center;
+    display: flex;
+    flex-direction: column; */
+    /* padding: 0 0 0 20px; */
+    /* } */
+    .small-icon-word p{
+    margin-bottom: 0;
+    /* padding-left: 10px; */
+    
+    }
+    
+    .small-icon-word{
+    width: calc(100% - 70px);
+    box-sizing: border-box;
+    padding: 0 0 0 20px;
+    /* width: 200px; */
+    }
+    
+    
+    
+    #second-information-field{
+    padding: 40px 30px;
+    margin-bottom: 45px;
+    }
+    
+    #second-min-text{
+    font-size: 22px;
+    color: black;
+    padding:0 10px ;
+    }
+    #orange-list li{
+    display: flex;
+    font-family: sans-serif;
+    font-size: 14px;
+    }
+    .list-orange-background{
+    width: 39px;
+    height: 10px;
+    border-radius: 100%;
+    background: #FFC628;
+    font-size: 25px;
+    text-align: center;
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 10px 0;
+    border: 10px solid white;
+    }
+    #orange-list li p{
+    padding-top: 10px;
+    }
+    
+    
+    .slider-card-field{
+    padding-top: 35px;
+    padding-left: 23px;
+    }
+    /* .card-body-footer{
+    padding-top: 35px;
+    } */
+    
+    .slider-card-field h5{
+    font-family: 'b';
+    font-size: 15px;
+    font-weight: bold;
+    font-family: sans-serif;
+    }
+    
+    .slider-card-title{
+    font-family: sans-serif;
+    font-size: 13px;
+    line-height: 19px;
+    color: rgba(0,0,0,0.5);
+    }
+    /* .card-text-footer{
+    color: white;
+    } */
+    
+    .slider-card-title-more{
+    font-size: 14px;
+    color:#0091fe ;
+    font-weight: bold;
+    }
+    .slider-card-title-more i{
+    padding-left: 25px;
+    }
+    
+    #slider-view{
+    border: none;
+    border-radius: 10px;
+    }
+    
+    
+    .card-order-form{
+    max-width: 750px;
+    margin: 0 auto;
+    padding: 80px 0 0 0;
+    height: 1120px;
+    }
+    
+    .order-title-step{
+    font-family: 'b';
+    font-family: sans-serif;
+    font-size: 20px;
+    display: block;
+    margin: 0 0 5px 0;
+    text-align: center;
+    font-weight: bold;
+    }
+    
+    .progress-step-bar{
+    text-align: center;
+    position: relative;
+    margin: 0 0 40px 0;
+    background-color: white;
+    }
+    
+    .progress-step-bar ul{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    z-index: 1;
+    margin-top: 19px;
+    }
+    
+    .progress-step-bar ul li{
+    width: 33.333%;
+    list-style: none;
+    }
+    .progress-step-bar ul li span{
+    color: black;
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    background: #FFC628;
+    font-size: 25px;
+    text-align: center;
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 23px 0;
+    border: 10px solid white;
+    }
+    .progress-step-bar ul li p{
+    font-family: sans-serif;
+    font-size: 12px;
+    color: rgba(0,0,0,0.5);
+    text-align: center;
+    line-height: 21px;
+    }
+    
+    
+    .progress-step-bar .step{
+    text-align: center;
+    width: 100%;
+    }
+    
+    .form-photo{
+    position: absolute;
+    z-index: 3;
+    left: 45%;
+    top: -6%;
+    }
+    .center-form-field{
+    position: absolute;
+    /* top: 100px; */
+    /* top:50%; */
+    margin-top: 420px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 700px;
+    height: 775px;
+    background-color: white;
+    border-radius: 10px;
+    border: 1px solid #ECECEC;
+    }
+    
+    .radio{
+    display: flex;
+    border: 1px solid #ececec;
+    height: 65px;
+    margin-top: 55px;
+    border-radius: 10px;
+    }
+    .radio div{
+    padding-top: 20px;
+    width: 100%;
+    }
+    #radio1{
+    border-right: 1px solid #ECECEC;
+    padding-left: 40px;
+    
+    }
+    #radio2{
+    border-right: 1px solid #ECECEC;
+    }
+    
+    #money li{
+        margin-right: 117px;
+        list-style: none;
+        margin-top: 18px;
+        
+    } 
+    
+    .user-name-common{
+    display: flex;
+    justify-content: space-between;
+    /* border: 1px solid #ECECEC; */
+    border-radius: 4px;
+    margin: 24px 0 0px 0;
+    }
+    .load-field{
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #ECECEC;
+    border-radius: 4px;
+    margin: 24px 0 0px 0;
+    
+    }
+    .user-firstname{
+    width: 100%;
+    box-sizing: border-box;
+    border-right: 1px solid #ECECEC;
+    position: relative;
+    }
+    .inputname{
+    border: none;
+    height: 60px;
+    width: 100%;
+    }
+    .user-lastname{
+    border-right: none;
+    width: 100%;
+    box-sizing: border-box;
+    }
+    
+    .center-form-field h1{
+    text-align: center;
+    padding: 0 0 20px 0;
+    border-bottom: 1 px solid silver;
+    
+    }
+    .center-form-field form{
+    padding: 0 60px;
+    box-sizing: border-box;
+    }
+    #inputState{
+    border-radius: 10px;
+    border: 1px solid #ECECEC;
+    
+    }
+    .btn-load1{
+    width: 100%;
+    box-sizing: border-box;
+    border-right: 1px solid #ECECEC;
+    position: relative;
+    }
+    
+    .btn-load2{
+    border-right: none;
+    width: 100%;
+    box-sizing: border-box;
+    
+    }
+    
+    .form-end{
+    /* border-top: 1px solid black; */
+    padding: 0px 60px;
+    }
+    .form-security{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 35px;
+    }
+    .security-information{
+    width: 284px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-content: stretch;
+    align-items: stretch;
+    padding-top: 11px;
+    margin-left: -57px;
+    }
+    .security-information p{
+    padding: 0 0 0 50px;
+    font-size: 15px;
+    line-height: 1.5;
+    color: #000;
+    text-align: left;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-image: url(https://www.yelo.az/site/templates/style/img/shield_gray_icon.svg);
+    }
+    
+    .submit-btn{
+    width: 33.333%;
+    height: 65px;
+    border-radius: 12px;
+    background-color: #FFC628;
+    
+    }
+    
+    .submit-btn:hover{
+    background-color: black;
+    color: white;
+    }
+    
+    
+    .story-title{
+    display: flex
+    }
+    
+    #count{
+    
+    font-size: 19px;
+    background-color:#FFC628;
+    color: white;
+    border-radius: 100%;
+    width: 32px;
+    height: 32px;
+    text-align: center;
+    vertical-align: middle;
+    display: inline-block;
+    margin: 0 0 0 10px;
+    padding-top: 2px;
+    }
+    
+    
+    #questions-more li{
+    display: flex;
+    }
+    .answers-list{
+    width: 39px;
+    height: 10px;
+    border-radius: 100%;
+    background: #FFC628;
+    font-size: 25px;
+    text-align: center;
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 10px 0;
+    border: 10px solid white;
+    }
+    #questions-more li p{
+    padding-top: 10px;
+    }
+    
+    .open-line{
+    display: inline-block;
+    vertical-align: middle;
+    width: 20px;
+    height: 20px;
+    margin: 0 0 0 5px;
+    transition: .3s cubic-bezier(.52,.01,.16,1);
+    transform: rotate(0deg);
+    background: url(https://www.yelo.az/site/templates/style/img/s_curr.svg);
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-size: 10px;
+    margin-top: 12px;
+    }
+    
+    .open-open:hover{
+    cursor: pointer;
+    }
+    .open-open1:hover{
+    cursor: pointer;
+    }
+    .open-open2:hover{
+    cursor: pointer;
+    }
+    .open-open3:hover{
+    cursor: pointer;
+    }
+    .open-open4:hover{
+    cursor: pointer;
+    }
+    .open-open5:hover{
+    cursor: pointer;
+    }
+    .open-open6:hover{
+    cursor: pointer;
+    }
+    .open-open7:hover{
+    cursor: pointer;
+    }
+    .open-open8:hover{
+    cursor: pointer;
+    }
+    .open-open9:hover{
+    cursor: pointer;
+    }
+    .open-open10:hover{
+    cursor: pointer;
+    }
+    .open-open11:hover{
+    cursor: pointer;
+    }
+    .open-open12:hover{
+    cursor: pointer;
+    }
+    .open-open13:hover{
+    cursor: pointer;
+    }
+    .open-open14:hover{
+    cursor: pointer;
+    }
+    .open-open15:hover{
+    cursor: pointer;
+    }
+    .open-open16:hover{
+    cursor: pointer;
+    }
+    
+    #blue-text{
+    color: #0091FE;
+    }
+    #blue-text:hover{
+    cursor: pointer;
+    }
+    .close-field{
+    display: none;
+    }
+    
+    .close-field.show{
+    display: inline;
+    
+    }
+    
+    
+    .close-field1{
+    display: none;
+    }
+    
+    .close-field1.show{
+    display: inline;
+    
+    }
+    .close-field1.show .open-line{
+    display: inline-block;
+    vertical-align: middle;
+    width: 20px;
+    height: 20px;
+    margin: 0 0 0 5px;
+    transition: .3s cubic-bezier(.52,.01,.16,1);
+    transform: rotate(-180deg);
+    background: url(https://www.yelo.az/site/templates/style/img/s_curr.svg);
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-size: 10px;
+    margin-top: 12px;
+    }
+    
+    
+    .close-field2{
+    display: none;
+    }
+    
+    .close-field2.show{
+    display: inline;
+    
+    }
+    .close-field2.show .open-line{
+    display: inline-block;
+    vertical-align: middle;
+    width: 20px;
+    height: 20px;
+    margin: 0 0 0 5px;
+    transition: .3s cubic-bezier(.52,.01,.16,1);
+    transform: rotate(-180deg);
+    background: url(https://www.yelo.az/site/templates/style/img/s_curr.svg);
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-size: 10px;
+    margin-top: 12px;
+    }
+    
+    
+    .close-field3{
+    display: none;
+    }
+    
+    .close-field3.show{
+    display: inline;
+    
+    }
+    .close-field3.show .open-line{
+    display: inline-block;
+    vertical-align: middle;
+    width: 20px;
+    height: 20px;
+    margin: 0 0 0 5px;
+    transition: .3s cubic-bezier(.52,.01,.16,1);
+    transform: rotate(-180deg);
+    background: url(https://www.yelo.az/site/templates/style/img/s_curr.svg);
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-size: 10px;
+    margin-top: 12px;
+    }
+    
+    
+    
+    .close-field4{
+    display: none;
+    }
+    
+    .close-field4.show{
+    display: inline;
+    
+    }
+    .close-field4.show .open-line{
+    display: inline-block;
+    vertical-align: middle;
+    width: 20px;
+    height: 20px;
+    margin: 0 0 0 5px;
+    transition: .3s cubic-bezier(.52,.01,.16,1);
+    transform: rotate(-180deg);
+    background: url(https://www.yelo.az/site/templates/style/img/s_curr.svg);
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-size: 10px;
+    margin-top: 12px;
+    }
+    
+    
+    .close-field5{
+    display: none;
+    }
+    
+    .close-field5.show{
+    display: inline;
+    
+    }
+    .close-field5.show .open-line{
+    display: inline-block;
+    vertical-align: middle;
+    width: 20px;
+    height: 20px;
+    margin: 0 0 0 5px;
+    transition: .3s cubic-bezier(.52,.01,.16,1);
+    transform: rotate(-180deg);
+    background: url(https://www.yelo.az/site/templates/style/img/s_curr.svg);
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-size: 10px;
+    margin-top: 12px;
+    }
+    
+    
+    .close-field6{
+    display: none;
+    }
+    
+    .close-field6.show{
+    display: inline;
+    
+    }
+    .close-field6.show .open-line{
+    display: inline-block;
+    vertical-align: middle;
+    width: 20px;
+    height: 20px;
+    margin: 0 0 0 5px;
+    transition: .3s cubic-bezier(.52,.01,.16,1);
+    transform: rotate(-180deg);
+    background: url(https://www.yelo.az/site/templates/style/img/s_curr.svg);
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-size: 10px;
+    margin-top: 12px;
+    }
+    
+    .close-field7{
+    display: none;
+    }
+    
+    .close-field7.show{
+    display: inline;
+    
+    }
+    .close-field7.show .open-line{
+    display: inline-block;
+    vertical-align: middle;
+    width: 20px;
+    height: 20px;
+    margin: 0 0 0 5px;
+    transition: .3s cubic-bezier(.52,.01,.16,1);
+    transform: rotate(-180deg);
+    background: url(https://www.yelo.az/site/templates/style/img/s_curr.svg);
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-size: 10px;
+    margin-top: 12px;
+    }
+    
+    .close-field8{
+    display: none;
+    }
+    
+    .close-field8.show{
+    display: inline;
+    
+    }
+    .close-field8.show .open-line{
+    display: inline-block;
+    vertical-align: middle;
+    width: 20px;
+    height: 20px;
+    margin: 0 0 0 5px;
+    transition: .3s cubic-bezier(.52,.01,.16,1);
+    transform: rotate(-180deg);
+    background: url(https://www.yelo.az/site/templates/style/img/s_curr.svg);
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-size: 10px;
+    margin-top: 12px;
+    }
+    
+    
+    .close-field9{
+    display: none;
+    }
+    
+    .close-field9.show{
+    display: inline;
+    
+    }
+    .close-field9.show .open-line{
+    display: inline-block;
+    vertical-align: middle;
+    width: 20px;
+    height: 20px;
+    margin: 0 0 0 5px;
+    transition: .3s cubic-bezier(.52,.01,.16,1);
+    transform: rotate(-180deg);
+    background: url(https://www.yelo.az/site/templates/style/img/s_curr.svg);
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-size: 10px;
+    margin-top: 12px;
+    }
+    
+    .close-field10{
+    display: none;
+    }
+    
+    .close-field10.show{
+    display: inline;
+    
+    }
+    .close-field10.show .open-line{
+    display: inline-block;
+    vertical-align: middle;
+    width: 20px;
+    height: 20px;
+    margin: 0 0 0 5px;
+    transition: .3s cubic-bezier(.52,.01,.16,1);
+    transform: rotate(-180deg);
+    background: url(https://www.yelo.az/site/templates/style/img/s_curr.svg);
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-size: 10px;
+    margin-top: 12px;
+    }
+    
+    .close-field11{
+    display: none;
+    }
+    
+    .close-field11.show{
+    display: inline;
+    
+    }
+    .close-field11.show .open-line{
+    display: inline-block;
+    vertical-align: middle;
+    width: 20px;
+    height: 20px;
+    margin: 0 0 0 5px;
+    transition: .3s cubic-bezier(.52,.01,.16,1);
+    transform: rotate(-180deg);
+    background: url(https://www.yelo.az/site/templates/style/img/s_curr.svg);
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-size: 10px;
+    margin-top: 12px;
+    }
+    
+    .close-field12{
+    display: none;
+    }
+    
+    .close-field12.show{
+    display: inline;
+    
+    }
+    .close-field12.show .open-line{
+    display: inline-block;
+    vertical-align: middle;
+    width: 20px;
+    height: 20px;
+    margin: 0 0 0 5px;
+    transition: .3s cubic-bezier(.52,.01,.16,1);
+    transform: rotate(-180deg);
+    background: url(https://www.yelo.az/site/templates/style/img/s_curr.svg);
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-size: 10px;
+    margin-top: 12px;
+    }
+    
+    .close-field13{
+    display: none;
+    }
+    
+    .close-field13.show{
+    display: inline;
+    
+    }
+    .close-field13.show .open-line{
+    display: inline-block;
+    vertical-align: middle;
+    width: 20px;
+    height: 20px;
+    margin: 0 0 0 5px;
+    transition: .3s cubic-bezier(.52,.01,.16,1);
+    transform: rotate(-180deg);
+    background: url(https://www.yelo.az/site/templates/style/img/s_curr.svg);
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-size: 10px;
+    margin-top: 12px;
+    }
+    
+    .close-field14{
+    display: none;
+    }
+    
+    .close-field14.show{
+    display: inline;
+    
+    }
+    .close-field14.show .open-line{
+    display: inline-block;
+    vertical-align: middle;
+    width: 20px;
+    height: 20px;
+    margin: 0 0 0 5px;
+    transition: .3s cubic-bezier(.52,.01,.16,1);
+    transform: rotate(-180deg);
+    background: url(https://www.yelo.az/site/templates/style/img/s_curr.svg);
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-size: 10px;
+    margin-top: 12px;
+    }
+    
+    .close-field15{
+    display: none;
+    }
+    
+    .close-field15.show{
+    display: inline;
+    
+    }
+    .close-field15.show .open-line{
+    display: inline-block;
+    vertical-align: middle;
+    width: 20px;
+    height: 20px;
+    margin: 0 0 0 5px;
+    transition: .3s cubic-bezier(.52,.01,.16,1);
+    transform: rotate(-180deg);
+    background: url(https://www.yelo.az/site/templates/style/img/s_curr.svg);
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-size: 10px;
+    margin-top: 12px;
+    }
+    
+    .close-field16{
+    display: none;
+    }
+    
+    .close-field16.show{
+    display: inline;
+    
+    }
+    .close-field16.show .open-line{
+    display: inline-block;
+    vertical-align: middle;
+    width: 20px;
+    height: 20px;
+    margin: 0 0 0 5px;
+    transition: .3s cubic-bezier(.52,.01,.16,1);
+    transform: rotate(-180deg);
+    background: url(https://www.yelo.az/site/templates/style/img/s_curr.svg);
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-size: 10px;
+    margin-top: 12px;
+    }
+    .choosefield-3 ul li:hover{
+    cursor: pointer;
+    }
+    .document-show{
+    display: none;
+    margin-bottom: 100px;
+    }
+    .open-questions{
+    display: none;
+    margin-bottom: 100px;
+    }
+    
+    .mainborder{
+    border-bottom: 3px solid #FFC628;
+    }
+    
+    
+    .documentborder:hover{
+    border-bottom: 3px solid #FFC628;
+    }
+    .questionsborder:hover{
+    border-bottom: 3px solid #FFC628;
+    }
+    
+ #money li{
+margin-right: 90px;
+list-style: none;
+margin-top: 18px;
+width: 136px;
+
+    }
+  
+    #sectionicon{
+      position: fixed;
+      right:15px;
+      top: 880px;;
+  }
+  #oneicon{
+      height: 100vh;
+  }
+  
+  .aclass{
+      height:59px;
+      width: 59px;
+      background-color:rgb(255, 198, 40) ;
+      border-radius: 50px;
+      text-align: center;
+      margin: 0;
+      line-height: 68px;
+  
+  }
+  .aclass i{
+      font-size: 26px;
+      color: white;
+      
+  }
+  .aclass:hover i{
+      transform: scale(1.4);
+  }

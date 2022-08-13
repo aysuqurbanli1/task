@@ -1,0 +1,854 @@
+{% from "_formhelpers.html" import render_field %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+<link rel="stylesheet" href="{{ url_for('static', filename='kartlaretraflisehifesi.css') }}">
+
+<link rel="stylesheet" href="../static/kartlaretraflisehifesi.css">
+<title>Document</title>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+</head>
+<header>
+            <div>
+            <nav class="navbar navbar-expand-lg navbar-light " id="navbar1">
+            <div class="container">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+            <li class="nav-item" style="border-bottom: 2px solid #FFC628; ">
+            <a class="nav-link" href="#" style="color: black; font-weight: bold;">Fərdi</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="#">Biznes</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" href="#">Bank haqqında</a>
+            </li>
+            </ul>
+            <ul class="navbar-nav">
+            <li class="nav-item2">
+            <a class="nav-link" href="#"> <i class="fas fa-map-marker-alt" > </i> ATM və Filiallar</a>
+            </li>
+            <li class="nav-item2">
+            <a class="nav-link" href="#"><i class="fas fa-user-clock" > </i> Onlayn növbə</a>
+            </li>
+            <li class="nav-item2">
+            <a class="nav-link" href="#"><i class="fas fa-phone-alt"></i> 981 </a>
+            </li>
+            <li class="nav-item2" id="search">
+                <a class="nav-link" href="#"  onclick="modal()"><i class="fas fa-search"></i></a>
+                </li>
+                
+                <div class="modal">
+                    <input class="inputname" type="text" name="name" placeholder="Axtarış"> 
+                    <i class="fas fa-search" style="size: 10px;"></i>
+                    <i class="fas fa-times" onclick="modalclose()"></i>
+                </div>
+
+
+            <li class="nav-item2 dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
+            AZ
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">AZ</a>
+            <a class="dropdown-item" href="#">EN</a>
+            <a class="dropdown-item" href="#">RU </a>
+            </div>
+            </li>
+            </ul>
+
+            </div>
+            </div>
+            </nav>
+            </div>
+            <div class="ex">
+            <nav class="navbar navbar-expand-lg navbar-light mt-3 " id="secondnav">
+            <div class="container" >
+            <ul class="navbar-nav mr-auto">
+            <a class="" href="#" id="logo" style="margin-right: 17px;"></a>
+            <a class="navbar-brand" href="#" >Kreditlər</a>
+            <a class="navbar-brand" href="#" style="border-bottom: 3px solid black;">Kartlar</a>
+            <a class="navbar-brand" href="/deposits/">Əmanətlər</a>
+            <a class="navbar-brand" href="#">Pul köçürmələri</a>
+            </ul>
+            <ul class="navbar-nav mr-auto" id="section1">
+            <button type="button" class="btn btn-warning rounded-pill" id="buttonbank"><i class="fas fa-sign-in-alt"> </i><span id="free" style="font-weight: bold; font-size: 14px;"> Internet Bank</span></button>
+            <button type="button" class="btn btn-light rounded-circle border " id="categorybutton"><i class="fas fa-bars"></i></button>
+            </ul>
+
+            </div>
+            </nav>
+            </div>
+</header>
+
+<body>
+
+<div class="card-grey-background" style="background-color: {{data2.color}};">
+    
+<div class="container">
+<div class="row ">
+<div class="col-md-8">
+<div id="card-grey-background-text">
+<div><h2 style="font-size: 55px; font-family: sans-serif; font-weight:500; ">{{data2.title}}</h2></div>
+<div class="card-grey-background-order-area">
+<button type="button" class="btn btn-dark " id="grey-order-btn" style="width: 230px; height: 60px;" ;>Sifariş et</button>
+</div>
+</div></div>
+<div class="col-md-4" id="background-picture">
+<div class="grey-background-card-image ">
+
+<div class="yelo-kart-image" style="background-image: url({{data2.image}});"></div>
+<div class="shadow1" style="background-image: url(https://www.yelo.az/site/templates/style/img/shadow.png); "></div>
+</div></div></div>
+
+</div></div>
+
+
+
+<div class="choosefield-3">
+<ul style="list-style: none; margin-bottom: 0;">
+<li class="mainborder">
+<a onclick="mainfield()">Kart haqqında </a>
+</li>
+<li class="documentborder" >
+<a onclick="senedler()">Sənədlər</a>
+</li>
+<li class="questionsborder">
+<a onclick="questions()">Sual-cavab</a>
+</li>
+</ul>
+</div>
+
+<div class="document-show">
+<div class="container" style="margin-top: 55px;">
+<ul class="all-document">
+<a href="" style="text-decoration: none;"> <li class="document-one">
+<div class="document-icon" style="background-image: url(https://www.yelo.az/site/templates/style/img/pdf.svg); " ></div>
+<div class="document-word">
+<p style="margin-bottom: 66px; color: black; font-weight: bold;">Təhlükəsizlik qaydaları</p>
+<div class="document-download-word"><span >Yüklə
+</span>
+<p style="margin-left: 11px;">507 KB</p></div>
+</div>
+</li></a>
+<a href="" style="text-decoration: none;"><li class="document-one">
+<div class="document-icon" style="background-image: url(https://www.yelo.az/site/templates/style/img/pdf.svg); " ></div>
+<div class="document-word">
+<p style="margin-bottom: 45px; color: black; font-weight: bold;">Vergilərə cəlb olunan xidmətlər
+</p>
+<div class="document-download-word"><span >Yüklə
+</span>
+<p style="margin-left: 11px;">464 KB</p></div>
+</div>
+</li></a> 
+<a href="" style="text-decoration: none;"><li class="document-one">
+<div class="document-icon" style="background-image: url(https://www.yelo.az/site/templates/style/img/pdf.svg); " ></div>
+<div class="document-word">
+<p style="margin-bottom: 66px;color: black; font-weight: bold;">Limitlər</p>
+<div class="document-download-word"><span >Yüklə
+</span>
+<p style="margin-left: 11px;">282 KB</p></div>
+</div>
+</li></a>
+<a href="" style="text-decoration: none;"><li class="document-one">
+<div class="document-icon" style="background-image: url(https://www.yelo.az/site/templates/style/img/pdf.svg); " ></div>
+<div class="document-word">
+<p style="margin-bottom: 45px; color: black; font-weight: bold;">Dövriyyə və cashback hesablanması qaydaları
+</p>
+<div class="document-download-word"><span >Yüklə
+</span>
+<p style="margin-left: 11px;">402 KB</p></div>
+</div>
+</li></a> 
+<a href="" style="text-decoration: none;"> <li class="document-one">
+<div class="document-icon" style="background-image: url(https://www.yelo.az/site/templates/style/img/pdf.svg); " ></div>
+<div class="document-word">
+<p style="margin-bottom: 66px; color: black; font-weight: bold;">Tariflər
+</p>
+<div class="document-download-word"><span >Yüklə
+</span>
+<p style="margin-left: 11px;">219 KB</p></div>
+</div>
+</li></a> 
+</ul>
+</div>
+</div>
+
+<div class="open-questions" style="margin-top: 70px;">
+<div class="container">
+<div class="questions">
+<div>
+<a id="open-a" class="open-open" style="text-decoration: none; display: flex;" onclick="opentext()" >
+<p style="color: black; border-bottom: 2px dashed black; width: 26%; font-size: 18px; font-weight: bold; "> Kart sifarişini necə edə bilərəm? </p>
+<span class="open-line"></span>
+</a>
+<div class="close-field">
+<p style="color: rgba(0,0,0,0.5);">Ödəniş kartını sifariş etməyin bir neçə yolu var:</p>
+
+<ul id="questions-more" class="lists text-muted">
+<li ><span class="answers-list"></span><p> Sayt vasitəsilə onlayn</p> </li>
+<li ><span class="answers-list"></span> <p> Yelo mobil əlavəsi vasitəsilə</p> </li>
+<li ><span class="answers-list"></span> <p> Məlumat mərkəzi ilə əlaqə saxlamaq (981)</p> </li>
+<li ><span class="answers-list"></span><p><span id="blue-text" > Filiala</span> müraciət etmək</p> </li>
+</ul>
+
+</div>
+</div>
+
+
+
+<div>
+<a id="open-a1" class="open-open1" style="text-decoration: none; display: flex;" onclick="opentext1()" >
+<p style="color: black; border-bottom: 2px dashed black; width: 30%; font-size: 18px; font-weight: bold; "> Kartımın balansını necə artıra bilərəm? </p>
+<span class="open-line"></span>
+</a>
+<div class="close-field1">
+<p style="color: rgba(0,0,0,0.5);">Kart balansını aşağıdakı üsullarla artırmaq mümkündür:</p>
+<ul id="questions-more" class="lists text-muted">
+<li ><span class="answers-list"></span><p> Yelo mobil əlavəsindən</p> </li>
+<li ><span class="answers-list"></span> <p> İnternet bankçılıq xidməti ilə</p> </li>
+<li ><span class="answers-list"></span> <p> Terminaldan (E-manat, Milliön, Easy Pay)</p> </li>
+<li ><span class="answers-list"></span><p>Onlayn (<span id="blue-text">hesab.az, e-pul.az</span>)</p> </li>
+<li ><span class="answers-list"></span> <p><span id="blue-text" > Filiala</span> yaxınlaşaraq</p> </li>
+</ul>
+</div>
+</div>
+
+
+<div>
+<a id="open-a2" class="open-open2" style="text-decoration: none; display: flex;" onclick="opentext2()" >
+<p style="color: black; border-bottom: 2px dashed black; width: 30%; font-size: 18px;font-weight: bold;"> Kartımın balansını necə artıra bilərəm? </p>
+<span class="open-line"></span>
+</a>
+<div class="close-field2">
+<p style="color: rgba(0,0,0,0.5);">Kartı <span id="blue-text" >ATM</span>-ə daxil edərək əsas menyuda “Xidmətlər” , oradan isə “SMS NOTIFICATIONS” bölməsinə daxil olmaq lazımdır. İki dəfə mobil telefon nömrəsi daxil edildikdən sonra xidmətə qoşulmaqla bağlı SMS gəlir. 
+
+<p style="color: rgba(0,0,0,0.5);">Qeyd: Xidmətdən aylıq istifadə haqqı 1.20 AZN təşkil edir"</p> </p>
+</div>
+</div>
+
+
+
+<div>
+<a id="open-a3" class="open-open3" style="text-decoration: none; display: flex;" onclick="opentext3()" >
+<p style="color: black; border-bottom: 2px dashed black; width: 38%; font-size: 18px; font-weight: bold;"> Kart hesabından çıxarışı necə əldə edə bilərəm? </p>
+<span class="open-line"></span>
+</a>
+<div class="close-field3">
+<p style="color: rgba(0,0,0,0.5);">Kart üzrə çıxarışın əldə olunması aşağıdakı yollarla mümkündür:</p>
+<ul id="questions-more" class="lists text-muted">
+<li ><span class="answers-list"></span><p> Yelo mobil əlavəsindən</p> </li>
+<li ><span class="answers-list"></span> <p><span id="blue-text" > ATM</span> vasitəsilə</p> </li>
+<li ><span class="answers-list"></span> <p><span id="blue-text" > Filiala</span> yaxınlaşaraq</p> </li>
+</ul>
+</div>
+</div>
+
+
+<div>
+<a id="open-a4" class="open-open4" style="text-decoration: none; display: flex;" onclick="opentext4()" >
+<p style="color: black; border-bottom: 2px dashed black; width: 30%; font-size: 18px; font-weight: bold;"> Kartımın balansını necə artıra bilərəm? </p>
+<span class="open-line"></span>
+</a>
+<div class="close-field4">
+<p style="color: rgba(0,0,0,0.5);">Kart üzrə mövcud limitlərin izlənilməsi və dəyişilməsi üçün Yelo mobil əlavəsindən istifadə etmək və ya <span id="blue-text" >filiala</span> yaxınlaşmaq lazımdır.
+
+<span id="blue-text" > Limitlər (pdf)</span></p>
+</div>
+</div>
+
+
+
+<div>
+<a id="open-a5" class="open-open5" style="text-decoration: none; display: flex;" onclick="opentext5()" >
+<p style="color: black; border-bottom: 2px dashed black; width: 17%; font-size: 18px;font-weight: bold; "> 3D Secure kod nədir? </p>
+<span class="open-line"></span>
+</a>
+<div class="close-field5">
+<p style="color: rgba(0,0,0,0.5);">3D Secure - dələduzluq hallarından mühafizə olunmaq və onlayn ödənişlərin təhlükəsizləşdirilməsi imkanı verən texnologiyadır. Yeni Yelo kartları müştərilərə 3D Secure xidmətinə avtomatik olaraq qoşulmuş vəziyyətdə təqdim olunur və 3D kodu SMS Xəbərdarlıq xidmətinə qoşulmadan kart sahibinə göndərilir. Onlayn alış-veriş etdikdə, 3D Secure xidmətini dəstəkləyən internet-mağaza müştərinin mobil telefonuna SMS şəklində təqdim olunan kodu daxil etməyi xahiş edəcək. Xidmət ödənişsizdir. 3D secure dəstəkləyən saytlarda 3D-siz keçən əməliyyatlar üzrə gündəlik limit məbləği bankın cari tariflərinə əsasən tətbiq olunur.</p>
+</div>
+</div>
+
+<div>
+<a id="open-a6" class="open-open6" style="text-decoration: none; display: flex;" onclick="opentext6()" >
+<p style="color: black; border-bottom: 2px dashed black; width: 38%; font-size: 18px; font-weight: bold;"> Kart hesabından çıxarışı necə əldə edə bilərəm? </p>
+<span class="open-line"></span>
+</a>
+<div class="close-field6">
+<p style="color: rgba(0,0,0,0.5);">Kart üzrə çıxarışın əldə olunması aşağıdakı yollarla mümkündür:</p>
+<ul id="questions-more" class="lists text-muted">
+<li ><span class="answers-list"></span><p> Yelo mobil əlavəsindən</p> </li>
+<li ><span class="answers-list"></span> <p><span id="blue-text" > ATM</span> vasitəsilə</p> </li>
+<li ><span class="answers-list"></span> <p><span id="blue-text" > Filiala</span> yaxınlaşaraq</p> </li>
+</ul>
+</div>
+</div>
+
+
+
+<div>
+<a id="open-a7" class="open-open7" style="text-decoration: none; display: flex;" onclick="opentext7()" >
+<p style="color: black; border-bottom: 2px dashed black; width: 19%; font-size: 18px; font-weight: bold;"> Kart üzrə limitlər nədir? </p>
+<span class="open-line"></span>
+</a>
+<div class="close-field7">
+<p style="color: rgba(0,0,0,0.5);">Kart əməliyyatlarını daha təhlükəsiz etmək üçüm bank əməliyyatlara limitlər təyin edir. Limitlər aşağıdakı formada olur: </p>
+<ul id="questions-more" class="lists text-muted">
+<li ><span class="answers-list"></span><p> Bankomatda və POS-terminal vasitəsilə nağdlaşdırma limiti</p> </li>
+<li ><span class="answers-list"></span> <p> Karta mədaxil limiti</p> </li>
+<li ><span class="answers-list"></span> <p> POS-terminal ödənişlərinə tətbiq olunan limit (təmaslı və təmassız)</p> </li>
+<li ><span class="answers-list"></span><p>Onlayn ödənişlər zamanı tətbiq olunan limit</p> </li>
+<li ><span class="answers-list"></span> <p>Card to Card -a tətbiq olunan limit</p> </li>
+</ul>
+<p style="color: rgba(0,0,0,0.5);">Bankın cari tariflərində risk zonasına daxil olan ölkələrdə dələduzluq risklərinin daha yüksək olmasını nəzərə alaraq, həmin ölkələrdə ödəniş kartları ilə əməliyyatların aparılması üzrə bank tərəfindən daha aşağı limitlər tətbiq olunub.
+
+<p id="blue-text" > Limitlər (pdf)</p> </p>
+</div>
+</div>
+
+
+
+<div>
+<a id="open-a8" class="open-open8" style="text-decoration: none; display: flex;" onclick="opentext8()" >
+<p style="color: black; border-bottom: 2px dashed black; width: 34%; font-size: 18px; font-weight: bold;"> Kartım itib və ya oğurlanıbsa nə etməliyəm?</p>
+<span class="open-line"></span>
+</a>
+<div class="close-field8">
+<p style="color: rgba(0,0,0,0.5);">Kart üzrə əməliyyatları daha təhlükəsiz etmək üçün bank kartlar üzrə aparılan əməliyyatlara limitlər tətbiq edir. Əgər ödəniş kartı itib və ya oğurlanıbsa, vəsaitin təhlükəsizliyi və öz rahatlığınız üçün kartı bloklaşdırılmağa tövsiyyə edirik. Kartı aşağıdakı üsullarla bloklaşdırmaq mümkündür: </p>
+<ul id="questions-more" class="lists text-muted">
+<li ><span class="answers-list"></span><p> Yelo mobil əlavəsindən</p> </li>
+<li ><span class="answers-list"></span> <p> Məlumat mərkəzi ilə əlaqə saxlayaraq (981)</p> </li>
+<li ><span class="answers-list"></span> <p> <span id="blue-text" > Filiala</span> yaxınlaşaraq</p> </li>
+<li ><span class="answers-list"></span><p>24/7 fəaliyyət göstərən Azərikard Müştəri Xidmətləri Mərkəzi ilə əlaqə saxlayaraq (194; ancaq beynəxalq zənglər üçün: +99450 225 28 00)</p> </li>
+</ul>
+<p style="color: rgba(0,0,0,0.5);">Əgər itirilmiş və ya oğurlanmış kart bloka salınıb, lakin həmin kartdan artıq əməliyyatlar aparılıbsa, bu halda banka ərizə ilə müraciət etmək lazımdır. Chargeback xidməti vasitəsilə məsələ araşdırılacaq və mümkün olduğu halda vəsait geri qaytarılacaq. </p>
+</div>
+</div>
+
+
+<div>
+<a id="open-a9" class="open-open9" style="text-decoration: none; display: flex;" onclick="opentext9()" >
+<p style="color: black; border-bottom: 2px dashed black; width: 58%; font-size: 18px; font-weight: bold;">PIN kodumu 3 dəfə səhv daxil etdim və kartım bloka düşdü. Nə etməliyəm? </p>
+<span class="open-line"></span>
+</a>
+<div class="close-field9">
+<p style="color: rgba(0,0,0,0.5);">Kart PIN kodu 3 dəfə düzgün daxil etmədiyinə görə bloka salınıbsa, aşağıdakı üsullarla blokdan çıxarmaq mümkündür:</p>
+<ul id="questions-more" class="lists text-muted">
+<li ><span class="answers-list"></span><p> Məlumat mərkəzi ilə əlaqə saxlayaraq (981)</p> </li>
+<li ><span class="answers-list"></span> <p><span id="blue-text" > Filiala</span> yaxınlaşaraq</p> </li>
+<li ><span class="answers-list"></span> <p>24/7 fəaliyyət göstərən Azərikard Müştəri Xidmətləri Mərkəzi ilə əlaqə saxlayaraq (194; ancaq beynəxalq zənglər üçün: 012 598 46 97)</p> </li>
+
+</ul>
+<p style="color: rgba(0,0,0,0.5);">Kartın PIN kodunu yaddan çıxıbsa, bu halda filiala yaxınlaşaraq bankın PIN Reset xidmətindən yararlanmaq olar (xidmət haqqı 3 AZN-dir). </p>
+</div>
+</div>
+
+<div>
+<a id="open-a10" class="open-open10" style="text-decoration: none; display: flex;" onclick="opentext10()" >
+<p style="color: black; border-bottom: 2px dashed black; width: 75%; font-size: 18px; font-weight: bold;">Məlumat Mərkəzi ilə əlaqə saxladım və açar sözünü təqdim etməyi xahiş etdilər. Açar sözü nədir? </p>
+<span class="open-line"></span>
+</a>
+<div class="close-field10">
+<p style="color: rgba(0,0,0,0.5);">Açar sözü məlumat mərkəzi ilə əlaqə saxlandığı zaman məlumatın təqdim olunması üçün təyin edilir. Məlumat mərkəzi (981) və ya 24/7 fəaliyyət göstərən Azərikard Müştəri Xidmətləri Mərkəzi (194; 012 598 46 97) ilə əlaqə saxlandığı zaman açar sözünü təqdim edərək kart üzrə məlumat əldə etmək olar.</p>
+</div>
+</div>
+
+<div>
+<a id="open-a11" class="open-open11" style="text-decoration: none; display: flex;" onclick="opentext11()" >
+<p style="color: black; border-bottom: 2px dashed black; width: 31%; font-size: 18px;font-weight: bold; ">"Surcharge" komissiyası nə deməkdir? </p>
+<span class="open-line"></span>
+</a>
+<div class="close-field11">
+<p style="color: rgba(0,0,0,0.5);">Kartın məxsus olduğu bankın mövcud komissiyasından əlavə qarşı tərəfin tətbiq edə biləcəyi əlavə komissiya haqqı "surcharge" adlanır. Məsələn, Yelo banka məxsus kartdan Azərikard xarici, ölkə daxili bankomatlarda nağdlaşdırma bankın tariflərinə əsasən 2% (min. 3 AZN / USD / EUR ) təşkil etdiyi halda, bankomatın məxsus olduğu bank da müştəridən nağdlaşdırmaya görə əlavə komissiya tuta bilər. Digər bank tərəfindən tutulan həmin əlavə komissiya isə "surcharge" komissiyasıdır. "Surcharge" komissiyası tətbiq olunacağı halda müştər bu barədə məlumatlandırılır.</p>
+</div>
+</div>
+
+<div>
+<a id="open-a12" class="open-open12" style="text-decoration: none; display: flex;" onclick="opentext12()" >
+<p style="color: black; border-bottom: 2px dashed black; width: 25%; font-size: 18px;font-weight: bold; "> Avtorizasiya kodu nə deməkdir? </p>
+<span class="open-line"></span>
+</a>
+<div class="close-field12">
+<p style="color: rgba(0,0,0,0.5);">Avtorizasiya kodu ödəniş kartı üzrə aparılan hər əməliyyatı identifikasiya edən unikal koddur. Həmin kod təqdim olunan qəbzdə 6 simvollu formada öz əksini tapır.</p>
+</div>
+</div>
+
+<div>
+<a id="open-a13" class="open-open13" style="text-decoration: none; display: flex;" onclick="opentext13()" >
+<p style="color: black; border-bottom: 2px dashed black; width: 14%; font-size: 18px; font-weight: bold;"> Cashback nədir? </p>
+<span class="open-line"></span>
+</a>
+<div class="close-field13">
+<p style="color: rgba(0,0,0,0.5);">Tərəfdaş şəbəkəsi daxilində və xaricində olan mağazalarda ödəniş kartı ilə aparılan ödənişlər zamanı məbləğin bir hissəsinin hesaba geri qayıtması "cashback" adlanır. <span id="blue-text">Cashback təkiflərimiz</span></p>
+</div>
+</div>
+
+<div>
+<a id="open-a14" class="open-open14" style="text-decoration: none; display: flex;" onclick="opentext14()" >
+<p style="color: black; border-bottom: 2px dashed black; width: 48%; font-size: 18px;font-weight: bold; "> 
+
+Dollar valyutasında olan kartımla Avro ilə ödəniş edə bilərəm? </p>
+<span class="open-line"></span>
+</a>
+<div class="close-field14">
+<p style="color: rgba(0,0,0,0.5);">Bəli, lakin bu zaman bankın cari tariflərində qeyd olunan konvertasiya haqqını ödəmək lazım olacaq. Ödənişləri avro valyutasında etmək üçün Yelo bankdan avro valyutalı kart da əldə etmək olar. Bu zaman kartdan konvertasiya haqqı tutulmayacaq.</p>
+</div>
+</div>
+
+<div>
+<a id="open-a15" class="open-open15" style="text-decoration: none; display: flex;" onclick="opentext15()" >
+<p style="color: black; border-bottom: 2px dashed black; width: 42%; font-size: 18px; font-weight: bold;"> Kartımın PIN kodunu unutmuşam. Bu halda nə edim? </p>
+<span class="open-line"></span>
+</a>
+<div class="close-field15">
+<p style="color: rgba(0,0,0,0.5);">PIN kodunu təyin etmək üçün istənilən filialdaki POS-terminalda PIN Reset xidmətindən istifadə etmək olar. PIN Reset xidmətindən istifadə aşağıdakı şəkildə həyata keçirilir:</p>
+<ul id="questions-more" class="lists text-muted">
+<li ><span class="answers-list"></span><p> PIN kodun bərpa olunması üçün xüsusi ərizə forması doldurulur</p> </li>
+<li ><span class="answers-list"></span> <p>Müraciətə əsasən köhnə PIN kod silinir</p> </li>
+<li ><span class="answers-list"></span> <p>Əməliyyatçı tərəfindən təqdim olunan POS-terminal vasitəsilə yeni PIN kod yaradır</p> </li>
+</ul>
+<p style="color: rgba(0,0,0,0.5);">PIN Reset üzrə xidmət haqqı 3 AZN təşkil edir.</p>
+</div>
+</div>
+
+<div>
+<a id="open-a16" class="open-open16" style="text-decoration: none; display: flex;" onclick="opentext16()" >
+<p style="color: black; border-bottom: 2px dashed black; width: 26%; font-size: 18px;font-weight: bold; "> 
+
+Kartımı necə bloklaşdıra bilərəm? </p>
+<span class="open-line"></span>
+</a>
+<div class="close-field16">
+<p style="color: rgba(0,0,0,0.5);">Kartı aşağıdakı üsullarla bloklaşdırmaq mümkündür:</p>
+<ul id="questions-more" class="lists text-muted">
+<li ><span class="answers-list"></span><p> Yelo mobil əlavədən</p> </li>
+<li ><span class="answers-list"></span> <p>Məlumat mərkəzi ilə əlaqə saxlayaraq (981)</p> </li>
+<li ><span class="answers-list"></span><p><span id="blue-text" > Filiala</span> yaxınlaşaraq</p> </li>
+<li ><span class="answers-list"></span> <p> 24/7 fəaliyyət göstərən Azərikard Müştəri Xidmətləri Mərkəzi (194; 012 598 46 97; ancaq beynəxalq zənglər üçün - 050 225 28 00) ilə əlaqə saxlayaraq</p> </li>
+</ul>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<div class="main-page">
+    {% for paragraph in about %}
+<div class="container" id="first-section-information" style="max-width: 840px;">
+<p class="text-center" id="first-section-min-text">{{paragraph.title1}}</p>
+</div>
+
+
+<div class="container">
+
+<ul class="all-small-icon">
+    {% for inf in infdata %}
+<li class="small-icon-one"> 
+<div class="small-icon" style="background-image: url({{inf.image}});background-color:{{inf.color}};" ></div>
+<div class="small-icon-word">
+<p>{{inf.text}}</p>
+</div>
+</li>
+{% endfor %}
+
+</ul>
+<p style="font-weight: bold;">{{paragraph.text1}}</p>
+</div>
+
+<div class="container" id="second-information-field" style="max-width: 840px;">
+<p class=" text-center " id="second-min-text">{{paragraph.title2}}</p>
+<ul id="orange-list" class="lists text-muted">
+
+<li ><span class="list-orange-background"></span><p> Daha yüksək cashback faizi (1.5%)</p> </li>
+<li ><span class="list-orange-background"></span> <p> Kartdakı qalıq məbləğə daha yüksək faiz gəliri</p> </li>
+<li ><span class="list-orange-background"></span> <p> Cari kredit borcunun illik 2%-in karta geri qaytarılması</p> </li>
+<li ><span class="list-orange-background"></span><p> Şərti ilk 3 ay ardıcıl yerinə yetirdikdə kartın qiymətinin balansa qaytarılması</p> </li>
+</ul>
+<p class="text-muted" style="margin-bottom: 0; font-family: sans-serif; font-size: 14px;">{{paragraph.title3}}</p>
+<br>
+<p class="text-muted" style="margin-top: 0; font-family: sans-serif; font-size: 14px;">{{paragraph.title4}}</p>
+</div>
+{% endfor %}
+</div>
+
+
+<style>
+.slider, #slider-view {
+width: 100%;
+margin: auto;
+}
+</style>
+<div style="font-weight: bold; font-size: 20px; font-family: sans-serif; margin-bottom: 20px; margin-left: 27px;">Kart xidmətləri</div>
+<div class="slider " style="margin: auto !important;">
+
+<div style="margin: auto !important; ">
+<a href="" style="text-decoration: none; color: black;" >
+<div class="card mb-3" id="slider-view" style=" background-color: #f3f1f7; height: 285px; width: 95%; text-decoration: none;">
+<div class="row no-gutters" >
+<div class="col-md-6">
+<div class="slider-card-field" >
+<h5>Onlayn PIN SET</h5>
+<p class="slider-card-title" style="margin-top: 10px;">Yeni Yelo kart sifariş vermisən və PIN (ŞEN) kodu onlayn təyin etmək istəyirsən? O zaman PIN Set web xidmətimizdən faydalana bilərsən. </p>
+<p class="slider-card-title-more" style=" margin-top: 27px; " > Daha etrafli <i class="fas fa-arrow-right"></i></p>
+</div>
+</div>
+<div class="col-md-6">
+<img class=" h-100 "
+src="https://www.yelo.az/site/assets/files/6210/pin-kod-3.png"
+alt="..." style="padding-top: 68px; width: 100%;">
+</div>
+</div>
+
+</div></a>
+</div>
+<div ><a href="" style="text-decoration: none; color: black;" >
+<div class="card mb-3" id="slider-view" style=" background-color: #f3f1f7; height: 285px; width: 95%; text-decoration: none;">
+
+<div class="row no-gutters" >
+<div class="col-md-6">
+<div class="slider-card-field" >
+<h5 >Cashback</h5>
+<p class="slider-card-title" style="margin-top: 10px;">Yelo kart ilə partnyor şəbəkəmizdə etdiyin ödənişlərə görə partnyordan asılı olaraq 30%-dək cashback əldə edə bilərsən.</p>
+<p class="slider-card-title-more" style="margin-top: 27px; " > Daha etrafli <i class="fas fa-arrow-right"></i></p>
+</div>
+</div>
+<div class="col-md-6"> 
+<img class=" h-100 "
+src="https://www.yelo.az/site/assets/files/1163/cashback-pic.png"
+alt="..." style="padding-top: 60px; width: 100%; ">
+</div>
+</div>
+
+</div></a>
+</div>
+<div ><a href="" style="text-decoration: none; color: black;" >
+<div class="card mb-3" id="slider-view" style=" background-color: #f3f1f7; height: 285px; width: 95%; text-decoration: none;">
+
+<div class="row no-gutters" >
+<div class="col-md-6">
+<div class="slider-card-field" >
+<h5 >PIN Reset</h5>
+<p class="slider-card-title" style="margin-top: 10px;">
+Bu xidmət kartının PIN kodunu unudanlar üçün çox faydalıdır.</p>
+<p class="slider-card-title-more" style=" margin-top: 103px;" > Daha etrafli <i class="fas fa-arrow-right"></i></p>
+</div>
+</div>
+<div class="col-md-6">
+<img class=" h-100 "
+src="https://www.yelo.az/site/assets/files/1104/pin-reset.png"
+alt="..." style="padding-top: 60px; width: 100%; ">
+</div>
+</div>
+</div></a>
+</div>
+<div ><a href="" style="text-decoration: none; color: black;" >
+<div class="card mb-3" id="slider-view" style=" background-color: #f3f1f7; height: 285px; width: 95%; text-decoration: none;">
+
+<div class="row no-gutters" >
+<div class="col-md-6">
+<div class="slider-card-field" >
+<h5 >PIN kodun dəyişdirilməsi
+</h5>
+<p class="slider-card-title" style="margin-top: 10px;">Əgər kartının PIN kodunu dəyişdirmək istəyirsənsə, istənilən Yelo Bank ATM-ə yaxınlaşa bilərsən.</p>
+<p class="slider-card-title-more" style=" margin-top: 47px;" > Daha etrafli <i class="fas fa-arrow-right"></i></p>
+</div>
+</div>
+<div class="col-md-6">
+<img class=" h-100 "
+src="https://www.yelo.az/site/assets/files/1105/pinchange-img.png"
+alt="..." style="padding-top: 60px; width: 100%; ">
+</div>
+</div>
+
+</div></a>
+</div>
+<div ><a href="" style="text-decoration: none; color: black;" >
+<div class="card mb-3" id="slider-view" style=" background-color: #f3f1f7; height: 285px; width: 95%; text-decoration: none;">
+<div class="row no-gutters" >
+<div class="col-md-7">
+<div class="slider-card-field" >
+<h5 >SMS məlumatlandırma
+</h5>
+<p class="slider-card-title" style="margin-top: 10px;">Bu xidmət kart sahiblərinə mobil nömrələri vasitəsilə hesablarına nəzarət imkanı yaradır.</p>
+<p class="slider-card-title-more" style=" margin-top: 66px;" > Daha etrafli <i class="fas fa-arrow-right"></i></p>
+</div>
+</div>
+<div class="col-md-5">
+<img class="h-100 "
+src="https://www.yelo.az/site/assets/files/1106/sms-not.png"
+alt="..." style="padding-top: 60px; width: 100%; ">
+</div>
+</div>
+</div></a>
+</div>
+<div ><a href="" style="text-decoration: none; color: black;" >
+<div class="card mb-3" id="slider-view" style=" background-color: #f3f1f7; height: 285px; width: 95%; text-decoration: none;">
+<div class="row no-gutters" >
+<div class="col-md-6">
+<div class="slider-card-field" >
+<h5 >3D secure</h5>
+<p class="slider-card-title" style="margin-top: 10px;">
+Yelo Bank internet ödənişlərin təhlükəsiz həyata keçirilməsini təmin etmək üçün 3D Secure xidmətini təqdim edir. Xidmət ödənişsizdir.</p>
+<p class="slider-card-title-more" style=" margin-top: 26px;" > Daha etrafli <i class="fas fa-arrow-right"></i></p>
+</div>
+</div>
+<div class="col-md-6">
+<img class="h-100 "
+src="https://www.yelo.az/site/assets/files/1107/3d-secure-img.png"
+alt="..." style="padding-top: 60px; width: 100%; ">
+</div>
+</div>
+</div></a>
+</div>
+<div ><a href="" style="text-decoration: none; color: black;" >
+<div class="card mb-3" id="slider-view" style=" background-color: #f3f1f7; height: 285px; width: 95%; text-decoration: none;">
+<div class="row no-gutters" >
+<div class="col-md-6">
+<div class="slider-card-field" >
+<h5 >Cash by code
+</h5>
+<p class="slider-card-title" style="margin-top: 10px;">Bu xidmət Yelo Bank kart sahiblərinə bank kartı olmayan şəxslərə günün istənilən vaxtı pul vəsaitlərinin göndərilməsini imkan verir. </p>
+<p class="slider-card-title-more" style=" margin-top: 24px;" > Daha etrafli <i class="fas fa-arrow-right"></i></p>
+</div>
+</div>
+<div class="col-md-6">
+<img class="w-110 h-100 "
+src="https://www.yelo.az/site/assets/files/1108/cash-by-code-fin.png"
+alt="..." style="padding-top: 60px; width: 190px;">
+</div>
+</div>
+</div></a>
+</div>
+<div ><a href="" style="text-decoration: none; color: black;" >
+<div class="card mb-3" id="slider-view" style=" background-color: #f3f1f7; height: 285px; width: 95%; text-decoration: none;">
+<div class="row no-gutters" >
+<div class="col-md-6">
+<div class="slider-card-field" >
+<h5 >Card to card</h5>
+<p class="slider-card-title" style="margin-top: 10px;">Bu xidmət kart sahiblərinə ATM şəbəkəsi vasitəsilə bir kartdan digər karta tez və rahat köçürmək imkanı verir.</p>
+<p class="slider-card-title-more" style="margin-top: 43px;" > Daha etrafli <i class="fas fa-arrow-right"></i></p>
+</div>
+</div>
+<div class="col-md-6">
+<img class="w-110 h-100 "
+src="https://www.yelo.az/site/assets/files/1109/card-to-card-img.png"
+alt="..." style="padding-top: 60px; width: 190px;">
+</div>
+</div>
+</div></a>
+</div>
+<div ><a href="" style="text-decoration: none; color: black;" >
+<div class="card mb-3" id="slider-view" style=" background-color: #f3f1f7; height: 285px; width: 95%; text-decoration: none;">
+<div class="row no-gutters" >
+<div class="col-md-6">
+<div class="slider-card-field" >
+<h5 >ATM PIN SET</h5>
+<p class="slider-card-title" style="margin-top: 10px;">Bu xidmət vasitəsilə ATM-dən PIN kodu təyin etmək çox asandır.</p>
+<p class="slider-card-title-more" style=" margin-top: 82px;" > Daha etrafli <i class="fas fa-arrow-right"></i></p>
+</div>
+</div>
+<div class="col-md-6">
+<img class="w-110 h-100 "
+src="https://www.yelo.az/site/assets/files/6706/atm_pinset.png"
+alt="..." style="padding-top: 60px; width: 190px;">
+</div>
+</div>
+</div></a>
+</div> 
+</div>
+
+
+<div class="card-order-form">
+
+<div class="order-title-step">Yelo kart əldə etmək üçün 3 sadə addım</div>
+<div>
+<div class="progress-step-bar">
+<ul>
+<li>
+<span>1 </span>
+<p>Onlayn sifariş formasını doldurun </p>
+</li>
+<li>
+<span>2</span>
+<p>Filialdan götürün</p>
+</li>
+<li>
+<span>3</span>
+<p>Kartın istifadəsindən zövq alın</p>
+</li>
+</ul>
+</div>
+</div>
+
+<div class="center-form-field"> 
+<div class="form-photo " ><img src="https://www.yelo.az/site/assets/files/2203/visa-platinum.svg" alt="" style="width: 72px; height: 115px; box-shadow: 0 20px 20px rgba(0,0,0,.1); border-radius: 10px; ">
+</div>
+
+
+<form class="form" method="POST" style="margin-top: 100px;">
+    <div style="text-align: center; font-weight: bold; font-family: sans-serif; font-size: 20px;">Yelo Premium sifariş et</div>
+{{ form.csrf_token }}
+<div class="radio ">
+    {{(form.money(class="form d-flex justify-content-between mr-5"))}}
+</div>
+
+<div class="user-name-common" >
+{{form.name(style="width: 289px; height: 59px; border: 1px solid #ECECEC; border-radius:4px;" )}}
+{{form.surname(style="width: 289px; height: 59px; border: 1px solid #ECECEC; border-radius:4px;")}}
+</div>
+<div class="form-row " style="margin-top: 20px;">
+<div class="form-group col-md-2">
+{{form.prefiks(style="height:59px; width:108px; border: 1px solid #ECECEC; background-color: white;border-radius:10px;")}}
+</div>
+<div class="form-group col-md-10">
+{{form.phonenumber(style="width:90%;margin-left: 48px; height:59px; border: 1px solid #ECECEC; border-radius:10px; ")}}
+</div>
+</div>
+<div class="form-row" style="margin-top: 10px;">
+<div class="col-md-6 mb-3">
+{{form.codetext(style="width: 270px; height:59px; border: 1px solid #ECECEC; border-radius:10px;")}}
+
+</div>
+<div class="col-md-6 mb-3">
+{{form.filial(style="width: 270px; height:59px; border: 1px solid #ECECEC; background-color: white; border-radius:10px;")}}
+</div>
+</div>
+<div class="load-field" style="border-radius: 5px; border: 1px solid #ECECEC; margin-top: 10px; height: 70px;" >
+<div class="btn-load1">
+<button class="btn btn-primary bg-white text-primary" type="submit" style="width: 100%; color: white;border: none; margin-top: 15px;"> <i class="fas fa-arrow-alt-circle-up" style="padding-right: 13px;"></i>S.V-nin on terefi</button>
+</div>
+<div class="btn-load2">
+<button class="btn btn-primary bg-white text-primary" type="submit" style="width: 100%; border: none; margin-top: 15px;"> <i class="fas fa-arrow-alt-circle-up" style="padding-right: 13px;"></i>S.V-nin arxa terefi</button>
+</div>
+</div>
+
+<hr>
+<div class="form-end">
+<div class="form-security">
+<div class="security-information">
+<p>Məlumatlarınızın təhlükəsizliyinə təminat veririk</p>
+</div>
+<button class="submit-btn" type="submit" style="border:none; font-family: sans-serif; font-weight: bold; font-size: 16px; margin-right: -55px; ">Sifaris et</button>
+</div>
+</div> 
+
+</form>
+<br>
+</div>
+</div>
+
+
+<div class="container" style="margin-top: 45px;">
+<div class="story-block">
+<div class="story-title">
+<h3 style="font-weight: bold; font-size: 24px;">Storilər </h3>
+<span id="count">3</span>
+</div>
+
+<div class="stories">
+<div class="d-flex justify-content-between">
+<a href="" style="text-decoration: none; color: white;" >
+<div class="card mb-3" style="max-width: 350px; max-height: 220px; background-color: #0071C7; text-decoration: none; border-radius: 12px; border: none;">
+<div class="row no-gutters max-height: 220px;">
+<div class="col-md-8">
+<div class="card-body">
+<button type="button" class="btn btn-outline border border-light rounded-pill bg-white" style="color: #0071C7; height: 29px; font-size: 11px; font-weight: bold;" >Kredit</button>
+<p class="card-text" style="font-size: 15px; font-weight:bold;">Xerclerini texire salma, her zaman destek ucun Yelo Bank var</p>
+</div>
+</div>
+<div class="col-md-4">
+<img class="w-100 h-100 "
+src="https://www.yelo.az/site/assets/files/2102/story-kredit.png"
+alt="...">
+</div>
+</div>
+</div></a>
+<a href="" style="text-decoration: none; color: white;" >
+<div class="card mb-3" style="max-width: 350px; background-color: #D82A34; border-radius: 12px; border: none;">
+<div class="row no-gutters">
+<div class="col-md-8" >
+<div class="card-body">
+<button type="button" class="btn btn-outline border border-light rounded-pill bg-white" style="color:#D82A34; height: 29px; font-size: 11px; font-weight: bold; " >Cashback</button>
+<p class="card-text" style="font-size: 15px; font-weight:bold;"> 600-den cox partnyoru ozunde birlesdiren Cashback proqrami</p>
+</div>
+</div>
+<div class="col-md-4">
+<img class="w-100 h-100 "
+src="https://www.yelo.az/site/assets/files/2145/stories-6.png"
+alt="...">
+</div>
+</div>
+</div></a>
+<a href="" style="text-decoration: none; color: white;" >
+<div class="card mb-3" style="max-width: 350px; background-color: #81BD5B; border-radius: 12px; border: none;">
+<div class="row no-gutters ">
+<div class="col-md-8" >
+<div class="card-body">
+<button type="button" class="btn btn-outline border border-light rounded-pill bg-white" style="color: #81BD5B; height: 29px; font-size: 11px; font-weight: bold;" >Yelo Kart</button>
+<p class="card-text" style="font-size: 15px; font-weight:bold;">Yelo Kart her emeliyyatda rahatliq anlayisini deyisecek
+</p>
+</div>
+</div>
+<div class="col-md-4">
+<img class="w-100 h-100 "
+src="https://www.yelo.az/site/assets/files/2103/stories-5-pic.png"
+alt="...">
+</div>
+</div>
+</div></a>
+</div>
+</div>
+
+</div>
+
+</div>
+<section id="sectionicon"> 
+    <div id="oneicon">
+        <p class="aclass"><a href="" target="_blank">
+            <i class="far fa-comment-alt"></i>
+        </a></p>
+    </div>
+</section>
+
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script>
+$('.slider').slick({
+slidesToShow: 5,
+slidesToScroll: 1,
+autoplay: true,
+autoplaySpeed: 2000,
+});
+</script> 
+
+<script>
+$(".open-line").on('click',function(){
+$(this).parent().toggleClass("showAnswer");
+})
+</script>
+
+</body>
+
+
+<script src="{{ url_for('static', filename='kartlaretraflisehifesi.js') }}"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+</html>

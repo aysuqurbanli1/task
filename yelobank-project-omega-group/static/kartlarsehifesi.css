@@ -1,0 +1,389 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    }
+
+.modal{
+      display: none;
+      height: 165px;
+      
+    
+    }
+
+.modal.show-modal{
+    background-color: white;
+    display: block;
+  
+
+}
+.modal input{
+    height: 70px;
+    width: 54%;
+    border: none;
+    /* margin-top: 20px; */
+    margin-left: 400px;
+    margin-bottom: 40px;
+    margin-top: 44px;
+}
+.modal button{
+    margin-left: 18px;
+    /* background-image: url(https://www.yelo.az/site/templates/style/img/search_header.svg); */
+    background-repeat: no-repeat;
+    /* height: 200px;
+    width: 200px; */
+    background-color: white;
+    background-size: auto;
+
+
+
+}
+.modal  i{
+    width: 49px;
+height: 39px;
+color: rgba(64, 53, 53, 0.44);
+}
+
+.modal i:hover{
+    cursor: pointer;
+}
+    
+    header{
+    font-family:sans-serif;
+    }
+    #navbar1{
+    height: 45px;
+    padding-top: 10px;
+    border-bottom: 1px solid #ECECEC;
+    }
+    .navbar-nav .nav-link{
+    font-size:13px;
+    }
+    /* .nav-link i{
+    padding-right: 4px;
+    } */
+    .nav-item{
+    padding: 0px 0px;
+    margin: 0 7px;
+    }
+    .nav-item:hover{
+    border-bottom: 2px solid #FFC628; 
+    }
+    .nav-item2{
+    padding: 0px 7px;
+    }
+    #logo {
+    display: block;
+    width: 144px;
+    height: 36px;
+    background: url(https://www.yelo.az/site/templates/style/img/logo.svg) no-repeat center;
+    }
+    .navbar-brand{
+    padding: -1px 10px;
+    font-size: 15px;
+    padding-right: 7px;
+    padding-top: 8px;
+    font-weight:600;
+    font-family: 'm';
+    }
+    .navbar-brand:hover{
+    border-bottom: 2px solid black;
+    }
+    #buttonbank{
+    height: 55px;
+    width: 170px;
+    margin-right: 13px;
+    border: 1px solid rgba(0,0,0,0.1);
+    }
+    
+    #buttonbank:hover{
+    background-color: black;
+    color: white;
+    
+    }
+    /* #buttonbank:hover #free{
+    display: none;
+    transition: 0.3s;
+    } */
+    #section1{
+    margin-left: 230px;
+    }
+    #categorybutton{
+    width: 55px;
+    }
+    .card-tt{
+    margin-top: 140px;
+    }
+    #cards-abt{
+    /* font: 16px/1.6 'r', Arial, sans-serif; */
+    font-family: 'h';
+    font-size: 53px;
+    
+    }
+    #cards-wr{
+    font-size: 19px;
+    line-height: 31px;
+    }
+    .card-title{
+    position: relative;
+    margin: auto;
+    margin-top: 120px;
+    }
+    
+    #card-paragraph{
+    font-size: 18px;
+    line-height: 30px;
+    }
+    .card-about{
+    display: flex;
+    /* justify-content:space-evenly; */
+    padding: 40px 0 50px 0;
+    }
+    
+    .card-about div{
+    margin: 0 40px 0 0;
+    }
+    
+    #list-card{
+    display: flex;
+    }
+    .name-card h2 {
+    font-family: 'h';
+    font-size: 30px;
+    line-height: 40px;
+    font-weight:600;
+    
+    }
+    .short-about{
+    font-size: 14px;
+    line-height: 21px;
+    color: rgba(0,0,0,0.5);
+    font-family: sans-serif;
+    }
+    .card-date p{
+    font-size: 14px;
+    color: rgba(0,0,0,0.5);
+    margin-bottom: 0;
+    font-family: sans-serif;
+    }
+    .type-mny p{
+    font-size: 14px;
+    color: rgba(0,0,0,0.5);
+    margin-bottom: 0;
+    font-family: sans-serif;
+    }
+    .cashback p{
+    font-size: 14px;
+    color: rgba(0,0,0,0.5);
+    margin-bottom: 0;
+    font-family: sans-serif;
+    }
+    
+    .card-about div b{
+    font-size: 18px;
+    }
+    
+    .all-story{
+    height: 175px;
+    }
+    .card-common{
+    position: relative;
+    background: url(https://www.yelo.az/site/templates/style/img/yelo_block.svg);
+    background-size: contain;
+    background-repeat: no-repeat ;
+    background-position: right;
+    border: 1px solid #ECECEC;
+    border-radius: 12px;
+    width: 100%;
+    margin-bottom: 45px;
+    
+    /* background: url("https://www.yelo.az/site/templates/style/img/yelo_block.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    justify-content: flex-end; */
+    
+    }
+    .card-image img{
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    
+    
+    /* padding-top: 50px; */
+    }
+    .card-image img:hover{
+        /* padding-top: 10px; */
+        cursor: pointer;
+        transform: translateX(20px);
+        transform: translateY(20px);
+        transition-duration: 300ms;
+       
+    }
+    #card-text{
+    padding: 45px 40px 45px 60px;
+    width: 590px;
+    }
+    .list-card{
+    
+    display: flex;
+    justify-content: flex-start;
+    }
+    
+    .story-block{
+    margin-top: 80px;
+    }
+    
+    .order-area{
+    display: flex;
+    justify-content: flex-start;
+    }
+    #order-btn{
+    margin-right: 50px;
+    height: 60px;
+    background-color: black;
+    font-weight: bold;
+    transform: skew(-14deg,0);
+    }
+    
+    #order-btn:hover{
+    background-color:#FFC628;
+    color: black;
+    border: none;
+    }
+    #about-area{
+    text-decoration: none;
+    padding: 15px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    }
+    #about-area:hover i{
+        padding-left: 10px;
+    }
+    
+    
+    .story-title{
+    display: flex;
+    margin-bottom: 5px;
+    }
+    .stories{
+    margin-bottom: 40px;
+    }
+    
+    /* .pic-1{
+    position: absolute;
+    background-color: blue;
+    } */
+    /* .story1-pic{
+    background: url("https://www.yelo.az/site/assets/files/2102/story-kredit.png");
+    } */
+    .all-story{
+    display: flex;
+    }
+    .end-text p{
+    font-size: 12px;
+    line-height: 25px;
+    color: #9d9d9d;
+    font-family: sans-serif;
+    }
+    .random{
+    display: flex;
+    }
+    .same{
+    text-decoration: none;
+    /* text-transform: none; */
+    height: 178px;
+    }
+    /* .slider{
+    display: flex;
+    justify-content: space-between;
+    } */
+    .slider, img{
+    width: 100%;
+    margin: auto;
+    height: 180px;
+    
+    }
+    .moreText{
+    display: none;
+    }
+    .read-more-btn{
+    cursor: pointer;
+    }
+    #count{
+    
+    font-size: 19px;
+    background-color:#FFC628;
+    color: white;
+    border-radius: 100%;
+    width: 32px;
+    height: 32px;
+    text-align: center;
+    vertical-align: middle;
+    display: inline-block;
+    margin: 0 0 0 10px;
+    }
+    
+    .article{
+    height: 100px;
+    overflow: hidden;
+    }
+    
+    #background-picture{
+    /* background: url("https://www.yelo.az/site/templates/style/img/yelo_block.svg"); */
+    
+    background-repeat: no-repeat ;
+    background-size: contain;
+    display: flex;
+    background-position-x: right;
+    /* height: 400px; */
+    /* justify-content: flex-end; */
+    }
+    
+    /* #secondnav{
+    height: 100px;
+    background: white;
+    width: 100%;
+    z-index: 12;
+    position: fixed;
+    margin-left: 350px;
+    } */
+    .ex{
+    position: fixed;
+    /* top: 0; */
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    transition: 0.3s;
+    padding: 2px 100px;
+    z-index: 1;
+    }
+    .ex.sticky #free{
+    display: none;
+    /* transition: 0.3s; */
+    }
+    .ex.sticky #buttonbank{
+    width: 60px;
+    transition: 0.2s;
+    }
+    .ex #free{
+    display: inline;
+    
+    }
+    .ex.sticky{
+    top: 0;
+    padding:5px 100px;
+    background: white;
+    border-bottom: 1px solid transparent;
+    }
+    
+    #more{
+    display: none;
+    }
+    #main-tt{
+    margin-top: 80px;
+    }
+    #readmore:hover{
+    cursor: pointer;
+    }
+    
